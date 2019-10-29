@@ -10,7 +10,7 @@ reg		clk		;
 reg		rst_n		;
 
 initial			clk = 1'b0	;
-always	@(tCK/2)	clk = ~clk	;
+always	#(tCK/2)	clk = ~clk	;
 
 
 top_nco_cnt_disp	u_top(	.o_seg_enb(	o_seg_enb	),
