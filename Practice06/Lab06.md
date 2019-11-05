@@ -41,9 +41,11 @@ assign six_digit_seg = { 3{seg_left , seg_right}}
 
 
 ### **FPGA동작 사진 (3 개 일반 , Q1, Q2)**
-![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/1.jpg)
-![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/02.jpg)
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/03.jpg)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/02.jpg)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/1.jpg)
+
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTEyMTEzMTQxNV19
 -->
