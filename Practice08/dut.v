@@ -665,12 +665,12 @@ wire	[5:0]	o_min		;
 wire		o_buzz_en	;
 
 minsec	u_minsec(	
-		.o_sec(			o_sec	),
-		.o_min(			o_min	),
+		.o_sec(			o_sec		),
+		.o_min(			o_min		),
 		.o_max_hit_sec(		o_max_hit_sec	),
 		.o_max_hit_min(		o_max_hit_min	),
 		.o_alarm(		o_buzz_en	),
-		.i_mode(		o_mode),
+		.i_mode(		o_mode		),
 		.i_position(		o_position	),
 		.i_sec_clk(		o_sec_clk	),
 		.i_min_clk(		o_min_clk	),
@@ -732,7 +732,6 @@ led_disp	u_led_disp(
 				.rst_n(			rst_n		));
 
 
-wire		o_buzz		;
 buzz	u_buzz(
 		.o_buzz(	o_alarm	),
 		.i_buzz_en(	o_buzz_en	),
