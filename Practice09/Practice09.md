@@ -153,7 +153,6 @@ cnt_l >= 1000이 아니면 0이므로 data[32-cnt32] <= 1'b0; 코드로  32bit d
 
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/1m%20clk%EB%A7%88%EB%8B%A4%20seq_rx%EA%B0%80%2000%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EC%9D%B4%20%EC%A6%9D%EA%B0%80.JPG?raw=true)
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/seq_rx%EA%B0%80%2001%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EA%B3%BC%20cnt_h%EA%B0%80%200%EC%9C%BC%EB%A1%9C%20%EC%B4%88%EA%B8%B0%ED%99%94&%201m%20clk%EB%A7%88%EB%8B%A4%20eq_rx%EA%B0%80%2011%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_h%EA%B0%80%201%EC%94%A9%20%EC%A6%9D%EA%B0%80.JPG?raw=true)
-![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/seq_rx%EA%B0%80%2001%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EA%B3%BC%20cnt_h%EA%B0%80%200%EC%9C%BC%EB%A1%9C%20%EC%B4%88%EA%B8%B0%ED%99%94.JPG?raw=true)
 - 1m clk마다 seq_rx==00이면 cnt_l이 증가, seq_rx==01이면 cnt_l, cnt_h초기화, seq_rx==11이면 cnt_h증가 
 
 
