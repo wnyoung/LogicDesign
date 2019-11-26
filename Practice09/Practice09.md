@@ -20,7 +20,7 @@ module	ir_rx(
 wire		ir_rx		;
 assign		ir_rx = ~i_ir_rxb;
 ```
-: IR리모컨에서 입력받는  i_ir_rxb을 반전시켜 ir_rx로 부름
+: IR리모컨에서 입력받는  i_ir_rxb을 반전시켜 ir_rx에 assign
 
 ```verilog
 //		1M Clock = 1 us Reference Time
@@ -31,7 +31,7 @@ nco		u_nco(
 		.clk		( clk		),
 		.rst_n		( rst_n		));
 ```
-: 4.5ms를 위해 1M Clock을 nco로 만든다.
+: 4.5ms등 ms에서 소수점 단위를 위해 1ms보다 작은 단위인 1us단위의 1M Clock을 nco 모듈로 만든다.
 
 ```verilog
 reg	[1:0]	seq_rx				;
@@ -43,7 +43,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 ```
-: seq_rx는 2bit을 저장하는 reg변수로 seq_rx[0]는 이전 비트를  seq_rx[1]은 현재 비트를 저장한다. 따라서 ir_rx의 변화를 감지하는 역할을 수행한다.
+: seq_rx는 2bit을 저장하는 reg타입 변수로 seq_rx[0]는 이전 ir_rx값을 seq_rx[1]은 현재 ir_rx값을 저장한다. 따라서 ir_rx의 변화를 감지하는 역할을 수행한다.
 
 
 ```verilog
@@ -66,7 +66,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 ```
-: seq_rx로 ir_rx를 감지하여 cnt_l과 cnt_h를 증가시킨다. clk_1M마다 seq_rx을 통해 ir_rx가 1이되면 cnt_h를 증가시키고 ir_rx가 0이되면 cnt_l을 증가시킨다.
+: seq_rx로 ir_rx를 감지하여 cnt_l과 cnt_h를 통해 0과 1이 얼마나 입력되었는지를 센다. clk_1M마다 seq_rx을 통해 ir_rx가 1이되면 cnt_h를 증가시키고 ir_rx가 0이되면 cnt_l을 증가시킨다.
 
 
 ```verilog
