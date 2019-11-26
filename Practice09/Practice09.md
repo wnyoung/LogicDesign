@@ -161,7 +161,7 @@ cnt_l >= 1000이 아니면 0이므로 data[32-cnt32] <= 1'b0; 코드로  32bit d
 
 
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/state%EA%B0%80%2010%EC%9D%B4%EA%B3%A0%20seq_rx11%EC%9D%B4%20%EB%90%98%EB%A9%B4%20%EC%99%84%EB%B2%BD%ED%95%9C%20%ED%95%9C%20%EB%B9%84%ED%8A%B8%EB%A5%BC%20%EB%B0%9B%EC%9D%80%EA%B2%83%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_32%EC%A6%9D%EA%B0%80.JPG?raw=true)
-- state가 10이고 seq_rx01이 되면 완벽한 한 비트를 받은것이므로 cnt_32를 1 증가
+- state가 10이고 seq_rx가 01이 되면 완벽한 한 비트를 받은것이므로 cnt_32를 1 증가
 
 
 
