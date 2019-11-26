@@ -16,7 +16,7 @@
 
 ##결과
 ### **FPGA**
-![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/fnd_dec.JPG)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/FPGA%20%EC%82%AC%EC%A7%84.jpg?raw=true)
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/top_nco_disp.JPG)
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/tb.JPG)
 ![](https://github.com/wnyoung/LogicDesign/blob/master/Practice06/wave.JPG)
