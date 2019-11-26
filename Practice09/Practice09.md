@@ -155,8 +155,24 @@ DATACODE에서 cnt_l >= 1000이면 1이므로 data[32-cnt32] <= 1'b1; 코드로 
 cnt_l >= 1000이 아니면 0이므로 data[32-cnt32] <= 1'b0; 코드로  32bit data변수의 data32-cnt32에 해당하는 data비트영역에 0을 저장한다. 
 
 
-![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/FPGA%20%EC%82%AC%EC%A7%84.jpg?raw=true)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/rxb-rx%EB%B0%98%EB%8C%80.JPG?raw=true)
+:rx를 반전시켜 rxb로 부른다.
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/rx%EC%99%80%20seq_rx%20%EA%B4%80%EA%B3%84.JPG?raw=true)
+:seq_rx는 rx의 변화를 감지하는 역할을 한다.
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/1m%20clk%EB%A7%88%EB%8B%A4%20seq_rx%EA%B0%80%2000%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EC%9D%B4%20%EC%A6%9D%EA%B0%80.JPG?raw=true)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/seq_rx%EA%B0%80%2001%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EA%B3%BC%20cnt_h%EA%B0%80%200%EC%9C%BC%EB%A1%9C%20%EC%B4%88%EA%B8%B0%ED%99%94&%201m%20clk%EB%A7%88%EB%8B%A4%20eq_rx%EA%B0%80%2011%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_h%EA%B0%80%201%EC%94%A9%20%EC%A6%9D%EA%B0%80.JPG?raw=true)
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/seq_rx%EA%B0%80%2001%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_l%EA%B3%BC%20cnt_h%EA%B0%80%200%EC%9C%BC%EB%A1%9C%20%EC%B4%88%EA%B8%B0%ED%99%94.JPG?raw=true)
+:1m clk마다 seq_rx==00이면 cnt_l이 증가, seq_rx==01이면 cnt_l, cnt_h초기화, seq_rx==11이면 cnt_h증가 
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/state%EA%B0%80%2001%EC%97%90%EC%84%9C%2010%EC%9C%BC%EB%A1%9C%20%EB%B3%80%ED%95%A8.JPG?raw=true)
+:reader code가 들어와서 state가 01에서 10으로 변함
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/state%EA%B0%80%2010%EC%9D%B4%EA%B3%A0%20seq_rx11%EC%9D%B4%20%EB%90%98%EB%A9%B4%20%EC%99%84%EB%B2%BD%ED%95%9C%20%ED%95%9C%20%EB%B9%84%ED%8A%B8%EB%A5%BC%20%EB%B0%9B%EC%9D%80%EA%B2%83%EC%9D%B4%EB%AF%80%EB%A1%9C%20cnt_32%EC%A6%9D%EA%B0%80.JPG?raw=true)
+:state가 10이고 seq_rx11이 되면 완벽한 한 비트를 받은것이므로 cnt_32 1 증가
 
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/cnt_l%EC%9D%B4%201000%EB%84%98%EC%9C%BC%EB%A9%B4%20data%5B32-cnt_32%5D%EC%97%90%20%ED%95%B4%EB%8B%B9%EC%8B%9C%EA%B8%B0%EC%97%90%20%EC%9E%85%EB%A0%A5%EB%90%9C%20%EB%B9%84%ED%8A%B8%20%EC%A0%80%EC%9E%A5.JPG?raw=true)
+:cnt_l이 1000넘으면 data[32-cnt_32]에 해당시기에 입력된 비트 저장
+
+![](https://github.com/wnyoung/LogicDesign/blob/master/Practice09/state%EA%B0%80%2010%EC%97%90%EC%84%9C%2011%EC%9D%B4%20%EB%90%98%EB%A9%B4%20data%EA%B0%80%20o_data%EB%A1%9C%20%EB%84%98%EC%96%B4%EA%B0%90.JPG?raw=true)
+:state가 10에서 11이 되면 data가 o_data로 넘어감
 
 
 <!--stackedit_data:
